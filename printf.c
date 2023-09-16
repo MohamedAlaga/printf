@@ -9,30 +9,35 @@ int _printf(const char *format, ...){
 
 	
 	va_start(args,format);
-	while (*format) {
-    if (*format != '%') {
-      write(1, format, 1);
-      counter++;
-      format++;
-    } else {
-      format++;
-      if (*format == 'c') {
-        format++;
-        tempchar = va_arg(args, int);
-        write(1, &tempchar, 4);
-        counter++;
-      } else if (*format == 's') {
-        format++;
-        char *temp = va_arg(args, char *);
-        int templen = strlen(temp);
-        write(1, temp, templen);
-        counter++;
-      } else {
+	while (*format)
+	{
+		if (*format != '%')
+        {
+	       	write(1,format,1);
+		counter ++;
+		format++;
+        }else
+        {
+         format++;
+         if (*format == 'c')
+         {
+             format++;
+             tempchar = va_arg(args,int);
+             write(1, &tempchar,4);
+	     counter++;
+         } else if (*format == 's')
+         {
+             format++;
+             temp = va_arg(args,char*);
+             templen = strlen(temp);
+             write(1, temp,templen);
+	     counter++;
+         }
+         else {
         write(1, format, 1);
-        format++;
         counter++;
       }
-    }
-  }
+         }
+        }
 	return counter;
 }
