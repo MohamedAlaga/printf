@@ -2,7 +2,10 @@
 
 int _printf(const char *format, ...){
 	int counter = 0;
+	int templen = 0;
 	va_list args;
+	char *temp;
+
 	
 	va_start(args,format);
 	while (*format)
@@ -18,14 +21,14 @@ int _printf(const char *format, ...){
          if (*format == 'c')
          {
              format++;
-             char* temp = va_arg(args,char*);
+             temp = va_arg(args,char*);
              write(1, temp,1);
 	     counter++;
          } else if (*format == 's')
          {
              format++;
-             char* temp = va_arg(args,char*);
-             int templen = strlen(temp);
+             temp = va_arg(args,char*);
+             templen = strlen(temp);
              write(1, temp,templen);
 	     counter++;
          }
