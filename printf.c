@@ -33,10 +33,6 @@ int _printf(const char *format, ...){
              write(1, temp,templen);
 	     counter++;
          }
-         else {
-        write(1, format, 1);
-        counter++;
-      }
          }
         }
 	return counter;
