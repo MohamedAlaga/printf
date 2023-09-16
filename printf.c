@@ -1,12 +1,15 @@
 #include"main.h"
 
-int _printf(const char *format, ...) {
-  int counter = 0;
-  int tempchar;
-  va_list args;
+int _printf(const char *format, ...){
+	int counter = 0;
+	int templen = 0;
+	va_list args;
+	char *temp;
+    int tempchar;
 
-  va_start(args, format);
-  while (*format) {
+	
+	va_start(args,format);
+	while (*format) {
     if (*format != '%') {
       write(1, format, 1);
       counter++;
@@ -31,5 +34,5 @@ int _printf(const char *format, ...) {
       }
     }
   }
-  return counter;
+	return counter;
 }
