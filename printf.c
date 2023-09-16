@@ -5,6 +5,7 @@ int _printf(const char *format, ...){
 	int templen = 0;
 	va_list args;
 	char *temp;
+    int tempchar;
 
 	
 	va_start(args,format);
@@ -21,8 +22,8 @@ int _printf(const char *format, ...){
          if (*format == 'c')
          {
              format++;
-             temp = va_arg(args,char*);
-             write(1, temp,1);
+             tempchar = va_arg(args,int);
+             write(1, &tempchar,4);
 	     counter++;
          } else if (*format == 's')
          {
