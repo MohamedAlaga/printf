@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 			tempchar = va_arg(args, int);
 			if (tempchar <32)
 				tempchar = 32;
-			write(1, &tempchar, 4);
+			write(1, &tempchar, 1);
 			counter++;
 		}
 		if (*format == 's')
