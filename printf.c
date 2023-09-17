@@ -8,38 +8,41 @@ int _printf(const char *format, ...){
 	int tempchar;
 
 	va_start(args,format);
+	if (format == NULL)
+		return (-1);
 	while (*format)
 	{
 		if (*format != '%')
 		{
-			write(1,format,1);
+			write(1, format,1);
 			counter ++;
 			format++;
+			continue;
 		}else
 		{
 			format++;
-			if (*format == 'c')
-			{
-				format++;
-				tempchar = va_arg(args,int);
-				write(1, &tempchar,4);
-				counter++;
-			} else if (*format == 's')
-			{
-				format++;
-				temp = va_arg(args,char*);
-				if (temp == NULL)
-					break;
-				templen = strlen(temp);
-				write(1, temp,templen);
-				counter++;
-			}else
-			{
-				write(1,format,1);
-				counter++;
-				format++;
-			}
 		}
+
+		if (*format == 'c')
+		{
+			tempchar = va_arg(args,int);
+			write(1, &tempchar,4);
+			counter++;
+		}
+		if (*format == 's')
+		{
+			temp = va_arg(args,char*);
+			templen = strlen(temp);
+			write(1, temp,templen);
+			counter++;
+		}
+		if (*format == '%')
+		{
+			write(1, format,1);
+			counter++;
+		}
+		format++;
+		
 	}
 	return counter;
 }
