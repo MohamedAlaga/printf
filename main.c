@@ -26,7 +26,12 @@ int main(void)
 	_printf("Percent:[%%]\n");
 	printf("Percent:[%%]\n");
 	printf("%");
-	_printf("My name is %sand the first letter in it is%c and i have %s years old %% and this % should","ahmed",'a',"19","aaaaa");
+
+	printf("TEST\n");
+	printf("OG\n");
+	printf("%c\n");
+	printf("OURS\n");
+	_printf("%c\n");
 
     return (0);
 }
