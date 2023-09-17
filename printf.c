@@ -28,6 +28,8 @@ int _printf(const char *format, ...){
 			{
 				format++;
 				temp = va_arg(args,char*);
+				if (temp == NULL)
+					break;
 				templen = strlen(temp);
 				write(1, temp,templen);
 				counter++;
