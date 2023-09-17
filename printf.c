@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 			temp = va_arg(args, char*);
 			templen = strlen(temp);
 			write(1, temp, templen);
-			counter++;
+			counter += templen;
 		}
 		if (*format == '%')
 		{
@@ -42,6 +42,7 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
+	write(1, format, 1);
 	va_end(args);
 	return (counter);
 }
