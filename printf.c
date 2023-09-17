@@ -25,26 +25,15 @@ int _printf(const char *format, ...)
 		if (*format == 'c')
 		{
 			tempchar = va_arg(args, int);
-			if (tempchar == 0)
-			{
-				temp =  " ";
-				write(1, temp, 1);
-			}
-			else
-			{
-				write(1, &tempchar, 4);
-			}
+			write(1, &tempchar, 4);
 			counter++;
 		}
 		if (*format == 's')
 		{
 			temp = va_arg(args, char*);
-			if (temp != NULL)
-			{
-				templen = strlen(temp);
-				write(1, temp, templen);
-				counter += templen;
-			}
+			templen = strlen(temp);
+			write(1, temp, templen);
+			counter += templen;
 		}
 		if (*format == '%')
 		{
