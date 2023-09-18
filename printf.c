@@ -1,29 +1,4 @@
 #include "main.h"
-void printchar(char c)
-{
-if (isgraph(c))
-write(1, &c, 1);
-else
-{write(1, " ", 1); }
-}
-void printstr(char *str)
-{
-if (isgraph(*str))
-while (*str)
-{
-printchar(*str);
-str++;
-}
-else
-{
-write(1, "(null)", 6) ; }}
-int stringlen(char *str)
-{
-if (isgraph(*str))
-{return (strlen(str)); }
-else
-return (6);
-}
 int _printf(const char *format, ...)
 {
 int counter = 0;
