@@ -9,19 +9,20 @@ else
 void printstr(char *str)
 {
 if (isgraph(*str))
-while(*str)
-{ 
+while (*str)
+{
 printchar(*str);
 str++;
 }
-else 
+else
 {
 write(1, "(null)", 6) ; }}
 int stringlen(char *str)
 {
 if (isgraph(*str))
 {return (strlen(str)); }
-else return(6);
+else
+return(6);
 }
 int _printf(const char *format, ...)
 {
@@ -36,15 +37,18 @@ if (*format == '%')
 format++;
 switch (*format)
 {
-case 'c': printchar(va_arg(args, int));
+case 'c':
+printchar(va_arg(args, int));
 break;
-case '%': printchar('%');
+case '%':
+printchar('%');
 break;
-case 's': temp = va_arg(args,char *);
+case 's':
+temp = va_arg(args, char *);
 printstr(temp);
-counter += stringlen(temp)-1;
+counter += stringlen(temp) - 1;
 break;
-}  
+}
 }
 else
 {
