@@ -6,8 +6,8 @@
 #include <ctype.h>
 #include <string.h>
 int _printf(const char *format, ...);
-void printchar(char c,char c2);
-int printstr(char *str ,char *str2);
-int stringlen(char *str);
+void printchar(char c);
+void printstr(char *str);
+int stringlen(char *str)
 
 #endif
