@@ -19,4 +19,4 @@ else
 {
 write(1, "(null)", 6);
 counter = 6; }
-return(counter); }
+return (counter); }
