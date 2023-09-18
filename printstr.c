@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * printstr - print all the string
+ *@str : string to be printed
+ *
+ */
 void printstr(char *str)
 {
 if (isgraph(*str))

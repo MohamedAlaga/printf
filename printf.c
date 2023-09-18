@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * _printf - print anything
+ *@format : str
+ *
+ * Return: number of charecters printed
+ */
 int _printf(const char *format, ...)
 {
 int counter = 0;
