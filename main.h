@@ -7,7 +7,7 @@
 #include <string.h>
 int _printf(const char *format, ...);
 int printchar(char c);
-void printstr(char *str);
+int printstr(char *str);
 int stringlen(char *str);
 
 #endif

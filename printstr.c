@@ -14,8 +14,8 @@ printchar(*str);
 str++;
 len++;
 }
-return len;}
+return (len); }
 else
 {
 write(1, "", 1);
-return (6);}}
+return (6); }}
