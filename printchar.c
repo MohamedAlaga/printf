@@ -3,10 +3,10 @@
  * printchar - print charecter
  *@c : char to be printed
  */
-void printchar(char c)
+void printchar(char c,char c2)
 {
-if (isgraph(c))
+if (isgraph(c) || c == ' ')
 write(1, &c, 1);
 else
-{write(1, " ", 1); }
+{write(1, "", 1); }
 }
