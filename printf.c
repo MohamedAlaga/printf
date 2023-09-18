@@ -26,13 +26,13 @@ if (*(format + 1) == 's')
 {
 temp = va_arg(args, char *);
 printstr(temp);
-counter += stringlen(temp) ;
+counter += stringlen(temp);
 }
 format++;
 }
 else
 {
-write(1, format, 1); 
+write(1, format, 1);
 counter++; }
 format++;
 }
