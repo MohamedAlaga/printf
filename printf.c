@@ -19,9 +19,9 @@ if (*format == '%' && (*(format + 1) == 'c'
 || *(format + 1) == 's' || *(format + 1) == '%'))
 {
 if (*(format + 1) == 'c')
-counter += printchar(va_arg(args, int));
+printchar(va_arg(args, int));
 if (*(format + 1) == '%')
-counter += printchar('%');
+printchar('%');
 if (*(format + 1) == 's')
 {
 temp = va_arg(args, char *);
@@ -32,9 +32,9 @@ format++;
 }
 else
 {
-write(1, format, 1); 
-counter++; }
+write(1, format, 1); }
 format++;
+counter++;
 }
 va_end(args);
 return (counter);
