@@ -19,22 +19,22 @@ if (*format == '%' && (*(format + 1) == 'c'
 || *(format + 1) == 's' || *(format + 1) == '%'))
 {
 if (*(format + 1) == 'c')
-printchar(va_arg(args, int));
+counter += printchar(va_arg(args, int));
 if (*(format + 1) == '%')
-printchar('%');
+counter += printchar('%');
 if (*(format + 1) == 's')
 {
 temp = va_arg(args, char *);
 printstr(temp);
-counter += stringlen(temp) - 1;
+counter += stringlen(temp) ;
 }
 format++;
 }
 else
 {
-write(1, format, 1); }
+write(1, format, 1); 
+counter++;}
 format++;
-counter++;
 }
 va_end(args);
 return (counter);

@@ -6,7 +6,7 @@
 #include <ctype.h>
 #include <string.h>
 int _printf(const char *format, ...);
-void printchar(char c);
+int printchar(char c);
 void printstr(char *str);
 int stringlen(char *str);
 
