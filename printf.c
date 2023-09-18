@@ -33,7 +33,7 @@ format++;
 else
 {
 write(1, format, 1); 
-counter++;}
+counter++; }
 format++;
 }
 va_end(args);
