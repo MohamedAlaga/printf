@@ -39,5 +39,6 @@ write(1, format, 1); }
 format++;
 counter++;
 }
+va_end(args);
 return (counter);
 }
