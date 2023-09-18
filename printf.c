@@ -47,6 +47,7 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
+	write(1, '\0', 1);
 	va_end(args);
 	return (counter);
 }
