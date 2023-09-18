@@ -26,4 +26,4 @@ printf("TEST\n");
 printf("OG\n");
 printf("OURS\n");
 return (0);
-};
+}

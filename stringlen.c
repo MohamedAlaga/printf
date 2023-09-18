@@ -11,4 +11,4 @@ if (isgraph(*str))
 {return (strlen(str)); }
 else
 return (6);
-};
+}

@@ -14,4 +14,4 @@ str++;
 }
 else
 {
-write(1, "(null)", 6) ; }};
+write(1, "(null)", 6) ; }}
