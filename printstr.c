@@ -6,12 +6,12 @@
  */
 void printstr(char *str)
 {
-//if (isgraph(*str))
+if (isgraph(*str))
 while (*str)
 {
 printchar(*str);
 str++;
 }
-//else
-//{
-/*write(1, "", 1) ; }*/}
+else
+{
+write(1, "", 1) ; }}
