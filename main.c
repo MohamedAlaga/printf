@@ -1,5 +1,3 @@
-#include <limits.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -28,4 +26,4 @@ printf("TEST\n");
 printf("OG\n");
 printf("OURS\n");
 return (0);
-}
+};

@@ -38,4 +38,4 @@ format++;
 counter++;
 }
 return (counter);
-}
+};
