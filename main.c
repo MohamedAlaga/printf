@@ -25,13 +25,10 @@ int main(void)
 	printf("String:[%s]\n", "I am a string !");
 	_printf("Percent:[%%]\n");
 	printf("Percent:[%%]\n");
-	printf("%");
 
 	printf("TEST\n");
 	printf("OG\n");
-	printf("%c\n");
 	printf("OURS\n");
-	_printf("%c\n");
 
     return (0);
 }

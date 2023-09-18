@@ -22,7 +22,7 @@ int stringlen(char *str)
 }
 int _printf(const char *format, ...)
 {
-int counter = 0,argNum = 0;
+int counter = 0;
 char *temp ;
 va_list args;
 va_start(args,format);
