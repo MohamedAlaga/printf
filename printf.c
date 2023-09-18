@@ -1,53 +1,46 @@
-#include"main.h"
+#include "main.h"
+void printchar(char c)
+{if (isgraph(c))
+write(1, &c, 1) ;
+else
+{write(1,"",1);}
+}
+void printstr(char *str)
+{ if (isgraph(*str))
+while(*str)
+{ 
+printchar(*str);
+str++;
+}
+ else {write(1,"(null)", 6) ;};
+}
+int stringlen(char *str)
+{
+  if (isgraph(*str))
+  {return (strlen(str));}
+  else return(6);
+}
 int _printf(const char *format, ...)
 {
-	int counter = 0, templen = 0, tempchar;
-	va_list args;
-	char *temp;
-
-	va_start(args, format);
-	if (format == NULL)
-		return (-1);
-	while (*format)
-	{
-		if (*format != '%')
-		{
-			write(1, format, 1);
-			counter++;
-			format++;
-			continue;
-		} else
-		{
-			format++;
-		}
-		if (*format == '\0')
-			break;
-		if (*format == 'c')
-		{
-			tempchar = va_arg(args, int);
-			if (tempchar <32)
-				tempchar = 32;
-			write(1, &tempchar, 1);
-			counter++;
-		}
-		if (*format == 's')
-		{
-			temp = va_arg(args, char*);
-			if (temp != NULL)
-			{
-				templen = strlen(temp);
-				write(1, temp, templen);
-				counter += templen;
-			}
-		}
-		if (*format == '%')
-		{
-			write(1, format, 1);
-			counter++;
-		}
-		format++;
-	}
-	write(1, '\0', 1);
-	va_end(args);
-	return (counter);
+int counter = 0,argNum = 0;
+char *temp ;
+va_list args;
+va_start(args,format);
+while(*format != '\0'){
+if(*format == '%')
+{ 
+format ++;
+switch (*format){
+case 'c' : printchar(va_arg(args,int));;
+break;
+case '%' : printchar('%');;
+break;
+case 's' : temp = va_arg(args,char *); printstr(temp);counter += stringlen(temp)-1;
+}  
+}
+else{write(1,format,1);}
+format ++;
+counter++;
+}
+return (counter);
 }
