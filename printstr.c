@@ -4,14 +4,17 @@
  *@str : string to be printed
  *
  */
-void printstr(char *str)
-{
-if (isgraph(*str))
+int printstr(char *str ,char *str2)
+{int counter = 0;
+if (isgraph(*str) && (str == str2))
 while (*str)
 {
-printchar(*str);
+printchar(*str,*str);
 str++;
+counter++;
 }
 else
 {
-write(1, "(null)", 6) ; }}
+write(1, "(null)", 6) ; 
+counter = 6;}
+return(counter);}
