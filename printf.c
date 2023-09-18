@@ -8,27 +8,24 @@
 int _printf(const char *format, ...)
 {
 int counter = 0;
-char *temp, *temp2;
+char *temp;
 va_list args;
-va_list argsTemp;
 if (format == NULL)
 return (-1);
 va_start(args, format);
-va_copy(argsTemp, args);
 while (*format != '\0')
 {
-if (*format == '%' && (*(format + 1) == 'c'
-|| *(format + 1) == 's' || *(format + 1) == '%'))
+if (*format == '%' && (*(format + 1) == 'c'|| *(format + 1) == 's' || *(format + 1) == '%'))
 {
 if (*(format + 1) == 'c')
-printchar(va_arg(args, int), va_arg(argsTemp, int));
+printchar(va_arg(args, int));
 if (*(format + 1) == '%')
-printchar('%', '%');
+printchar('%');
 if (*(format + 1) == 's')
 {
 temp = va_arg(args, char *);
-temp2 = va_arg(argsTemp, char*);
-counter += (printstr(temp, temp2) - 1);
+printstr(temp);
+counter += stringlen(temp) - 1;
 }
 format++;
 }
