@@ -4,14 +4,18 @@
  *@str : string to be printed
  *
  */
-void printstr(char *str)
-{
+int printstr(char *str)
+{int len = 0;
 if (isgraph(*str))
+{
 while (*str)
 {
 printchar(*str);
 str++;
+len++;
 }
+return len;}
 else
 {
-write(1, "", 1) ; }}
+write(1, "", 1);
+return (6);}}

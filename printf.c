@@ -25,8 +25,7 @@ counter += printchar('%');
 if (*(format + 1) == 's')
 {
 temp = va_arg(args, char *);
-printstr(temp);
-counter += stringlen(temp);
+counter += printstr(temp);
 }
 format++;
 }
