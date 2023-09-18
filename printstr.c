@@ -7,7 +7,11 @@
 void printstr(char *str)
 {
 if (isgraph(*str))
-write(1,str,strlen(str));
+while (*str)
+{
+printchar(*str);
+str++;
+}
 else
 {
 write(1, "", 1) ; }}
