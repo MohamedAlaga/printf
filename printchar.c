@@ -2,7 +2,7 @@
 /**
  * printchar - print charecter
  *@c : char to be printed
-* Return: number of charecters printed
+ * Return: number of charecters printed
  */
 int printchar(char c)
 {
