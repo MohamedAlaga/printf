@@ -17,8 +17,7 @@ while (*format != '\0')
 {
 if (*format == '%')
 {
-format++;
-switch (*format)
+switch (*(format + 1))
 {
 case 'c':
 printchar(va_arg(args, int));
@@ -31,7 +30,12 @@ temp = va_arg(args, char *);
 printstr(temp);
 counter += stringlen(temp) - 1;
 break;
+default:
+printchar(*format);
+counter++;
+break;
 }
+format++;
 }
 else
 {
