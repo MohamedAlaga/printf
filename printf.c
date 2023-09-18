@@ -15,7 +15,8 @@ return (-1);
 va_start(args, format);
 while (*format != '\0')
 {
-if (*format == '%' && (*(format + 1) == 'c'|| *(format + 1) == 's' || *(format + 1) == '%'))
+if (*format == '%' && (*(format + 1) == 'c'
+|| *(format + 1) == 's' || *(format + 1) == '%'))
 {
 if (*(format + 1) == 'c')
 printchar(va_arg(args, int));
