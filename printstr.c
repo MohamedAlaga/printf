@@ -7,7 +7,8 @@
 int printstr(char *str)
 {int len = 0;
 /*if (isgraph(*str))
-{*/
+*{
+*/
 while (*str)
 {
 printchar(*str);
@@ -16,6 +17,7 @@ len++;
 }
 return (len); }
 /*else
-{
-write(1, "", 1);
-return (6); }}*/
+*{
+*write(1, "", 1);
+*return (6); }}
+*/
