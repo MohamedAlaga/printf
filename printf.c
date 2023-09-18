@@ -15,25 +15,18 @@ return (-1);
 va_start(args, format);
 while (*format != '\0')
 {
-if (*format == '%')
+if (*format == '%' && (*(format + 1) == 'c'
+|| *(format + 1) == 's' || *(format + 1) == '%'))
 {
-switch (*(format + 1))
-{
-case 'c':
+if (*(format + 1) == 'c')
 printchar(va_arg(args, int));
-break;
-case '%':
+if (*(format + 1) == '%')
 printchar('%');
-break;
-case 's':
+if (*(format + 1) == 's')
+{
 temp = va_arg(args, char *);
 printstr(temp);
 counter += stringlen(temp) - 1;
-break;
-default:
-printchar(*format);
-counter++;
-break;
 }
 format++;
 }
