@@ -8,6 +8,6 @@
 int _printf(const char *format, ...);
 void printchar(char c);
 void printstr(char *str);
-int stringlen(char *str)
+int stringlen(char *str);
 
 #endif
