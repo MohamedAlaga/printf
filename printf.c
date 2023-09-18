@@ -22,7 +22,7 @@ int stringlen(char *str)
 if (isgraph(*str))
 {return (strlen(str)); }
 else
-return(6);
+return (6);
 }
 int _printf(const char *format, ...)
 {
@@ -52,7 +52,7 @@ break;
 }
 else
 {
-write(1, format, 1);}
+write (1, format, 1);}
 format++;
 counter++;
 }
