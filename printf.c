@@ -22,9 +22,11 @@ switch (*format)
 {
 case 'c':
 printchar(va_arg(args, int));
+counter++;
 break;
 case '%':
 printchar('%');
+counter++;
 break;
 case 's':
 temp = va_arg(args, char *);
