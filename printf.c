@@ -7,32 +7,30 @@
  */
 int _printf(const char *format, ...)
 {
-int counter = 0;
-char *temp;
+int counter = 0,num;
+char *temp ;
 va_list args;
 if (format == NULL)
 return (-1);
 va_start(args, format);
 while (*format != '\0')
 {
-if (*format == '%' )
+if (*format == '%' && (*(format + 1) == 'c'
+|| *(format + 1) == 's' || *(format + 1) == '%' || *(format + 1) == 'd' || *(format + 1) == 'i'))
 {
 if (*(format + 1) == 'c')
 counter += printchar(va_arg(args, int));
+else if (*(format + 1) == '%')
+counter += printchar('%');
 else if (*(format + 1) == 's')
 {
 temp = va_arg(args, char *);
 counter += printstr(temp);
 }
-else if (*(format + 1) == 'd')
+else if (*(format + 1) == 'd' || *(format + 1) == 'i')
 {
-temp = va_arg(args, char*);
-if (*temp >= 30 && *temp <= 39)
-printchar(*temp);
-}
-else
-{
-counter += printchar('%');
+num = va_arg(args, int);
+printnum(num);
 }
 format++;
 }
