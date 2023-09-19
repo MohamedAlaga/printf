@@ -13,7 +13,7 @@ while(forcount)
 forcount = forcount /10;
 len++;
 }
-multi = pow(10,(len - 1));
+multi = _pow(10,(len - 1));
 for (i = 0; i < len; i++)
 {
 temp = n / multi;
@@ -22,4 +22,14 @@ multi = multi / 10;
 printchar(temp+'0');
 }
 return len;
+}
+
+int _pow(int x, int y)
+{
+if (y < 0)
+return (-1);
+else if (y <= 0)
+return (1);
+else
+return (x * _pow(x, y - 1));
 }

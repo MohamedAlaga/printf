@@ -6,8 +6,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <stdlib.h>
-#include <math.h>
-double pow(double x, double y);
+int _pow(int x, int y);
 int _printf(const char *format, ...);
 int printchar(char c);
 int printstr(char *str);
