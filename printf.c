@@ -8,7 +8,7 @@
 int _printf(const char *format, ...)
 {
 int counter = 0;
-char *temp ;
+char *temp;
 va_list args;
 if (format == NULL)
 return (-1);
@@ -30,7 +30,7 @@ counter += printstr(temp);
 if (*(format + 1) == 'd')
 {
 temp = va_arg(args, char*);
-if(*temp >= 30 && *temp <= 39)
+if (*temp >= 30 && *temp <= 39)
 printchar(*temp);
 }
 format++;

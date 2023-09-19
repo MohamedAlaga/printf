@@ -6,8 +6,8 @@
  */
 int printchar(char c)
 {
-if (isgraph(c) || c == ' '|| c == '\n' || (c >= 127 && c <= 32))
+if (isgraph(c) || c == ' ' ||  c == '\n' || (c >= 127 && c <= 32))
 return (write(1, &c, 1));
 else
-return(write(1, "", 1)); 
+return (write(1, "", 1));
 }
