@@ -30,7 +30,7 @@ counter += printstr(temp);
 else if (*(format + 1) == 'd' || *(format + 1) == 'i')
 {
 num = va_arg(args, int);
-printnum(num);
+counter += printnum(num);
 }
 format++;
 }
