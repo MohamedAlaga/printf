@@ -6,7 +6,7 @@
  */
 int printchar(char c)
 {
-if (c > 32)
+if (isgraph(c) || c == ' '|| c == '\n' || (c >= 32 && c <= 127))
 return (write(1, &c, 1));
 else
 return(write(1, "", 1)); 
