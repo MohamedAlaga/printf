@@ -19,18 +19,20 @@ if (*format == '%' )
 {
 if (*(format + 1) == 'c')
 counter += printchar(va_arg(args, int));
-if (*(format + 1) == '%')
-counter += printchar('%');
-if (*(format + 1) == 's')
+else if (*(format + 1) == 's')
 {
 temp = va_arg(args, char *);
 counter += printstr(temp);
 }
-if (*(format + 1) == 'd')
+else if (*(format + 1) == 'd')
 {
 temp = va_arg(args, char*);
 if (*temp >= 30 && *temp <= 39)
 printchar(*temp);
+}
+else
+{
+counter += printchar('%');
 }
 format++;
 }
