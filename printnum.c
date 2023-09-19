@@ -2,7 +2,7 @@
 int printnum(int n)
 {
 int len =0,temp;
-int forcount = n, rest = 0, multi = 1;
+int forcount = n, i= 0, multi = 1;
 
 if (n < 0){
 printchar('-');
@@ -14,7 +14,7 @@ forcount = forcount /10;
 len++;
 }
 multi = pow(10,(len - 1));
-for (int i = 0; i < len; i++)
+for (i = 0; i < len; i++)
 {
 temp = n / multi;
 n = n % multi;
