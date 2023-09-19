@@ -6,9 +6,8 @@
  */
 int printchar(char c)
 {
-if (isgraph(c) || c == ' ')
-write(1, &c, 1);
+if (isgraph(c) || c == ' '|| c == '\n')
+return (write(1, &c, 1));
 else
-{write(1, "", 1); }
-return (1);
+return(write(1, "", 1)); 
 }

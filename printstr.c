@@ -17,5 +17,5 @@ len++;
 return (len); }
 else
 {
-write(1, "(null)", 6);
-return (6); }}
+return (write(1, "(null)", 6)); }}
+
