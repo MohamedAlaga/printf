@@ -3,5 +3,5 @@ started with simple printf.
 worked witaaahaaa
 aaa characters first
 then with strings
-aathen with %
+aaathen with %
 en with numbeeeraaa
