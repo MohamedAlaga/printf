@@ -1,6 +1,6 @@
 # printf
 started with simple printf.
-worked witaaaha characters first
+worked witaaahaaaa characters first
 then with strings
 then with %
 then with numbeeeraaa
