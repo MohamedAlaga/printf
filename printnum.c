@@ -4,6 +4,11 @@ int printnum(int n)
 int len =0,temp;
 int forcount = n, i= 0, multi = 1;
 
+if (n == 0)
+{
+printchar('0');
+return (1);
+}
 if (n < 0){
 printchar('-');
 n=n*(-1);
