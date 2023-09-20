@@ -7,7 +7,6 @@ equal
 the rekkless
 pushing
 without
-consideration
 .
 .
 .
