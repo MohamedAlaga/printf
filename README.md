@@ -3,4 +3,4 @@ started with simple printf.
 worked with characters first
 then with strings
 then with %
-then with numbeeeraaaaa
+then with numbeeeraaa
