@@ -6,4 +6,3 @@ to
 equal
 the rekkless
 pushing
-without
