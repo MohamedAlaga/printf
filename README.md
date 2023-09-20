@@ -4,4 +4,3 @@ more
 lines
 to
 equal
-the rekkless
