@@ -1,3 +1,4 @@
 # printf
 started with simple printf.
-worked with characters firs
+worked with characters first
+then with strings
