@@ -7,4 +7,3 @@ equal
 the rekkless
 pushing
 without
-.
