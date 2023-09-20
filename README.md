@@ -5,4 +5,3 @@ lines
 to
 equal
 the rekkless
-pushing
